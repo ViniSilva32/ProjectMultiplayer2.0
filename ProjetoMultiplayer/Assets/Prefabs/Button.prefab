@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8556134590695339509}
-  - component: {fileID: 505839058275158234}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -33,25 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &505839058275158234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839074059136010314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3438d03485837284d88ab0db97adacad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  positionToMoveTo: {x: 0, y: 0, z: 0}
-  Red: {fileID: 0}
-  Pink: {fileID: 0}
-  Blue: {fileID: 0}
-  Green: {fileID: 0}
-  Yellow: {fileID: 0}
-  Brown: {fileID: 0}
 --- !u!1 &4918663785865738301
 GameObject:
   m_ObjectHideFlags: 0
