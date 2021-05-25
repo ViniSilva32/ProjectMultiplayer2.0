@@ -7242,7 +7242,7 @@ MonoBehaviour:
   playerNameInput: {fileID: 55645506}
   lobbyPn: {fileID: 257518643}
   roomNameInput: {fileID: 1027019023}
-  playerPUN: {fileID: 7795060811101172167, guid: df2ba17f1bbc3bc4da72acd5aa947111,
+  playerPUN: {fileID: 4546908810495319032, guid: e10f0440ba107fc459b855f3294ea1c9,
     type: 3}
   mainCamera: {fileID: 1877112979}
   SpawnA: {fileID: 1481885699}
