@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8556134590695339509}
+  - component: {fileID: 4108248820048950507}
+  - component: {fileID: 4503298350609118757}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -32,6 +34,40 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4108248820048950507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839074059136010314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8725ad144e63e7419fa0aa3fabded42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InteractiveButton: {fileID: 4993286201433536301}
+  Portas:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!65 &4503298350609118757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839074059136010314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 3.0719986, z: 1.5}
+  m_Center: {x: -0.11649132, y: 0.16243362, z: 0}
 --- !u!1 &4918663785865738301
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +95,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4918663785865738301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5053406, y: 11.554184, z: 8.498432}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.45686, y: 1.3698641, z: 0.45686}
   m_Children: []
   m_Father: {fileID: 8556134590695339509}
@@ -138,6 +174,7 @@ GameObject:
   - component: {fileID: 7178916885362902745}
   - component: {fileID: 8752344437210872624}
   - component: {fileID: 3242889490613927800}
+  - component: {fileID: 7316908980519007421}
   m_Layer: 0
   m_Name: Interactive Button
   m_TagString: Untagged
@@ -153,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4993286201433536301}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.5053406, y: 12.976189, z: 8.498432}
+  m_LocalPosition: {x: 0, y: 1.3935, z: 0}
   m_LocalScale: {x: 0.33024126, y: 0.05435111, z: 0.33024126}
   m_Children: []
   m_Father: {fileID: 8556134590695339509}
@@ -220,3 +257,20 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &7316908980519007421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993286201433536301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
