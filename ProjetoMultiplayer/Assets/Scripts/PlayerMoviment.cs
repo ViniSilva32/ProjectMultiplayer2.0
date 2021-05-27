@@ -5,57 +5,99 @@ using UnityEngine;
 public class PlayerMoviment : MonoBehaviour
 {
     private CharacterController controller;
-    private Animator anim;
-    public Camera PlayerCam; 
+   
+     
+    [SerializeField]
+    public float speed = 8f;
+    
+    [SerializeField]
+    public float lookSensivity = 3f;
+    
+    [SerializeField]
+    GameObject fpsCamera;
 
-    public float speed;
-    public float gravity;
-    public float rotSpeed;
+    public float JumpForce;
+    public CapsuleCollider col;
+    public LayerMask GroundLayers;
 
-    private float rot;
-    private Vector3 moveDirection;
+    private Vector3 velocity = Vector3.zero;
+    private Vector3 rotations = Vector3.zero;
+
+    private Rigidbody rb;
+
+    private float CameraRotation = 0f;
+    private float currentCameraRotation = 0f;
+    
+
+    
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        controller = GetComponent<CharacterController>();
-        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
+        col = GetComponent<CapsuleCollider>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Move();
-    }
+        float xMovement = Input.GetAxis("Horizontal");
+        float zMovement = Input.GetAxis("Vertical");
 
-    void Move()
-    {
-        if (controller.isGrounded)
-        {
-            moveDirection += Input.GetAxis("Vertical") * Vector3.forward * speed;
+        Vector3 movementHorizontal = transform.right * xMovement;
+        Vector3 movementVertical = transform.forward * zMovement;
 
-            //if (Input.GetKey(KeyCode.W))
-            //{
-            //    moveDirection = Vector3.forward * speed * Time.deltaTime;
-            //    //anim.SetInteger("Transition", 1);
-            //}
-            //if (Input.GetKeyUp(KeyCode.W))
-            //{
-            //    moveDirection = Vector3.zero;
-            //    //anim.SetInteger("Transition", 0);
-            //}
-        }
+        Vector3 movementVelocity = (movementHorizontal + movementVertical).normalized * speed;
         
+            Move(movementVelocity);
 
-        //rot += Input.GetAxis("Horizontal") * rotSpeed * Time.deltaTime;
-        //transform.eulerAngles = new Vector3(0, rot, 0);
+        if ( IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+        }
 
-        moveDirection.y -= gravity * Time.deltaTime;
-        moveDirection = transform.TransformDirection(moveDirection);
+        float yRotation = Input.GetAxis("Mouse X");
+        Vector3 rotationVector = new Vector3(0, yRotation, 0) * lookSensivity;
 
-        controller.Move(moveDirection * Time.deltaTime);
+        Rotate(rotationVector);
+
+        float CameraRotation = Input.GetAxis("Mouse y") * lookSensivity;
+
+
+        RotateCamera(CameraRotation);
+    }
+    private bool IsGrounded() => Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, 
+        col.bounds.center.z), col.radius * 12f, GroundLayers);
+
+    void Move(Vector3 movementVelocity)
+    {
+        velocity = movementVelocity;
     }
 
+    void Rotate(Vector3 rotationVector)
+    {
+        rotations = rotationVector;
+    }
+
+    private void FixedUpdate()
+    {
+        if (velocity != Vector3.zero)
+        {
+            rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+        }
+        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotations));
+        if(fpsCamera != null)
+        {
+            currentCameraRotation -= CameraRotation;
+            currentCameraRotation = Mathf.Clamp(currentCameraRotation, 0, 0); 
+        }
+    }
+
+    void RotateCamera(float cameraRotation)
+    {
+        CameraRotation = cameraRotation;
+    }
 }
 
 
