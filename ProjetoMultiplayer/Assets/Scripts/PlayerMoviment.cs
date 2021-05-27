@@ -62,7 +62,7 @@ public class PlayerMoviment : MonoBehaviour
 
         Rotate(rotationVector);
 
-        float CameraRotation = Input.GetAxis("Mouse y") * lookSensivity;
+        float CameraRotation = Input.GetAxis("Mouse Y") * lookSensivity;
 
 
         RotateCamera(CameraRotation);
