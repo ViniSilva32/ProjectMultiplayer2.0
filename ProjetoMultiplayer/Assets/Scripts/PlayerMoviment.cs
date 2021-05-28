@@ -5,7 +5,7 @@ using Photon.Pun;
 using Photon.Pun.UtilityScripts;
 using Photon.Realtime;
 
-public class PlayerMoviment : MonoBehaviour
+public class PlayerMoviment : MonoBehaviourPun
 {
     private CharacterController controller;
    
@@ -47,7 +47,7 @@ public class PlayerMoviment : MonoBehaviour
         frente = 10;
         re = 5;
 
-        if (this.photonview.IsMine)
+        if (!photonview.IsMine)
         {
             myCamera.gameObject.SetActive(false);
         }
