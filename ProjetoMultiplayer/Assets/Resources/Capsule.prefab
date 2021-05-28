@@ -108,6 +108,7 @@ MonoBehaviour:
     m_Bits: 256
   photonview: {fileID: 0}
   myCamera: {fileID: 0}
+  GameOver: {fileID: 0}
 --- !u!136 &6639348367060483222
 CapsuleCollider:
   m_ObjectHideFlags: 0

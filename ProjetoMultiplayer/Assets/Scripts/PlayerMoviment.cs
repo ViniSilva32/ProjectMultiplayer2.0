@@ -35,6 +35,7 @@ public class PlayerMoviment : MonoBehaviour
     public Camera myCamera;
     float frente;
     float re;
+    public GameObject GameOver;
 
     NetworkControl teste;
 
@@ -152,6 +153,14 @@ public class PlayerMoviment : MonoBehaviour
         if (other.CompareTag("RespawnB"))
         {
             transform.position = teste.SpawnB.transform.position;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            GameOver.gameObject.SetActive(true);
         }
     }
 }
