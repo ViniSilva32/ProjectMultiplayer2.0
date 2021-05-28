@@ -1289,6 +1289,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 764bece23ecf6b84d9eb3cfff40941f7, type: 3}
+--- !u!1 &193583767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4993286201433536301, guid: 45331ab310480b54da0306db817189e0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1358986700658789697}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &233912445 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4958228731623260, guid: 764bece23ecf6b84d9eb3cfff40941f7,
@@ -3477,6 +3483,46 @@ PrefabInstance:
       propertyPath: Porta
       value: 
       objectReference: {fileID: 101813095}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: InteractiveButton
+      value: 
+      objectReference: {fileID: 193583767}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[0]
+      value: 
+      objectReference: {fileID: 605374681}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[1]
+      value: 
+      objectReference: {fileID: 1498820574}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[2]
+      value: 
+      objectReference: {fileID: 102399262}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[3]
+      value: 
+      objectReference: {fileID: 101813095}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[4]
+      value: 
+      objectReference: {fileID: 569976491}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[5]
+      value: 
+      objectReference: {fileID: 876729449}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[6]
+      value: 
+      objectReference: {fileID: 1216004888}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -4456,6 +4502,46 @@ PrefabInstance:
       propertyPath: Porta
       value: 
       objectReference: {fileID: 102399262}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: InteractiveButton
+      value: 
+      objectReference: {fileID: 193583767}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[0]
+      value: 
+      objectReference: {fileID: 605374681}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[1]
+      value: 
+      objectReference: {fileID: 1498820574}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[2]
+      value: 
+      objectReference: {fileID: 102399262}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[3]
+      value: 
+      objectReference: {fileID: 101813095}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[4]
+      value: 
+      objectReference: {fileID: 569976491}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[5]
+      value: 
+      objectReference: {fileID: 876729449}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[6]
+      value: 
+      objectReference: {fileID: 1216004888}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -4464,17 +4550,17 @@ PrefabInstance:
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.33333334
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.22222227
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.33333334
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
@@ -4484,7 +4570,7 @@ PrefabInstance:
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.228
+      value: 0.028
       objectReference: {fileID: 0}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
@@ -5945,6 +6031,46 @@ PrefabInstance:
       propertyPath: Porta
       value: 
       objectReference: {fileID: 605374681}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: InteractiveButton
+      value: 
+      objectReference: {fileID: 193583767}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[0]
+      value: 
+      objectReference: {fileID: 605374681}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[1]
+      value: 
+      objectReference: {fileID: 1498820574}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[2]
+      value: 
+      objectReference: {fileID: 102399262}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[3]
+      value: 
+      objectReference: {fileID: 101813095}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[4]
+      value: 
+      objectReference: {fileID: 569976491}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[5]
+      value: 
+      objectReference: {fileID: 876729449}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[6]
+      value: 
+      objectReference: {fileID: 1216004888}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -6844,6 +6970,46 @@ PrefabInstance:
       propertyPath: Porta
       value: 
       objectReference: {fileID: 1216004888}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: InteractiveButton
+      value: 
+      objectReference: {fileID: 193583767}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[0]
+      value: 
+      objectReference: {fileID: 605374681}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[1]
+      value: 
+      objectReference: {fileID: 1498820574}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[2]
+      value: 
+      objectReference: {fileID: 102399262}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[3]
+      value: 
+      objectReference: {fileID: 101813095}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[4]
+      value: 
+      objectReference: {fileID: 569976491}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[5]
+      value: 
+      objectReference: {fileID: 876729449}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[6]
+      value: 
+      objectReference: {fileID: 1216004888}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -7068,7 +7234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1337781659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9368,6 +9534,46 @@ PrefabInstance:
       propertyPath: Porta
       value: 
       objectReference: {fileID: 569976491}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: InteractiveButton
+      value: 
+      objectReference: {fileID: 193583767}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[0]
+      value: 
+      objectReference: {fileID: 605374681}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[1]
+      value: 
+      objectReference: {fileID: 1498820574}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[2]
+      value: 
+      objectReference: {fileID: 102399262}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[3]
+      value: 
+      objectReference: {fileID: 101813095}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[4]
+      value: 
+      objectReference: {fileID: 569976491}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[5]
+      value: 
+      objectReference: {fileID: 876729449}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[6]
+      value: 
+      objectReference: {fileID: 1216004888}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_RootOrder
@@ -11045,6 +11251,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: InteractiveButton
+      value: 
+      objectReference: {fileID: 193583767}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[0]
+      value: 
+      objectReference: {fileID: 605374681}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[1]
+      value: 
+      objectReference: {fileID: 1498820574}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[2]
+      value: 
+      objectReference: {fileID: 102399262}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[3]
+      value: 
+      objectReference: {fileID: 101813095}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[4]
+      value: 
+      objectReference: {fileID: 569976491}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[5]
+      value: 
+      objectReference: {fileID: 876729449}
+    - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: Portas.Array.data[6]
+      value: 
+      objectReference: {fileID: 1216004888}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_RootOrder
