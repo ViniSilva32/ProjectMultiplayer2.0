@@ -13,7 +13,7 @@ public class Button : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ButtonColor = InteractiveButton.GetComponent<Renderer>().material.name;
+       // ButtonColor = InteractiveButton.GetComponent<Renderer>().material.name;
     }
 
     // Update is called once per frame
@@ -50,27 +50,27 @@ public class Button : MonoBehaviour
     {
         //Porta.SetActive(false);
 
-        switch (ButtonColor)
+        switch (this.tag)
         {
-            case "Yellow Button (Instance)":
+            case "Yellow":
                 Portas[0].SetActive(false);
                 break;
-            case "Green Button (Instance)":
+            case "Green":
                 Portas[1].SetActive(false);
                 break;
-            case "Red Button (Instance)":
+            case "Red":
                 Portas[2].SetActive(false);
                 break;
-            case "Brown Button (Instance)":
+            case "Brown":
                 Portas[3].SetActive(false);
                 break;
-            case "Orange Button (Instance)":
+            case "Orange":
                 Portas[4].SetActive(false);
                 break;
-            case "Pink Button (Instance)":
+            case "Pink":
                 Portas[5].SetActive(false);
                 break;
-            case "Blue Button (Instance)":
+            case "Blue":
                 Portas[6].SetActive(false);
                 break;
 

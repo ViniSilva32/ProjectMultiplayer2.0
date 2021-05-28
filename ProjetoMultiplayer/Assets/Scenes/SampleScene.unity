@@ -3478,6 +3478,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1839074059136010314, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Brown
+      objectReference: {fileID: 0}
     - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: Porta
@@ -4102,7 +4107,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758193442}
   m_LocalRotation: {x: -0, y: -0.258819, z: -0, w: 0.9659259}
-  m_LocalPosition: {x: -38.222782, y: -38.81231, z: 50.528236}
+  m_LocalPosition: {x: -38.222782, y: -39.88, z: 50.528236}
   m_LocalScale: {x: 5.145051, y: 1, z: 4.4815087}
   m_Children: []
   m_Father: {fileID: 2087304080}
@@ -4496,6 +4501,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839074059136010314, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Red
       objectReference: {fileID: 0}
     - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
@@ -6026,6 +6036,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1839074059136010314, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Yellow
+      objectReference: {fileID: 0}
     - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: Porta
@@ -6964,6 +6979,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Button (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1839074059136010314, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Blue
       objectReference: {fileID: 0}
     - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
@@ -9529,6 +9549,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1839074059136010314, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Green
+      objectReference: {fileID: 0}
     - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: Porta
@@ -11251,6 +11276,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1839074059136010314, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Orange
+      objectReference: {fileID: 0}
     - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: InteractiveButton
@@ -11603,6 +11633,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 1839074059136010314, guid: 45331ab310480b54da0306db817189e0,
+        type: 3}
+      propertyPath: m_TagString
+      value: Pink
+      objectReference: {fileID: 0}
     - target: {fileID: 4108248820048950507, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: Porta
@@ -11676,7 +11711,7 @@ PrefabInstance:
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.77
+      value: 0.532
       objectReference: {fileID: 0}
     - target: {fileID: 8556134590695339509, guid: 45331ab310480b54da0306db817189e0,
         type: 3}

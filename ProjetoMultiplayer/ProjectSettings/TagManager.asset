@@ -6,6 +6,13 @@ TagManager:
   tags:
   - RespawnB
   - Network
+  - Yellow
+  - Green
+  - Blue
+  - Red
+  - Brown
+  - Pink
+  - Orange
   layers:
   - Default
   - TransparentFX
