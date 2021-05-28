@@ -55,25 +55,32 @@ public class Button : MonoBehaviour
         switch (this.tag)
         {
             case "Yellow":
-                Portas[0].SetActive(false);
+                //Portas[0].SetActive(false);
+                Destroy(Portas[0].gameObject);
                 break;
             case "Green":
-                Portas[1].SetActive(false);
+                //Portas[1].SetActive(false);
+                Destroy(Portas[1].gameObject);
                 break;
             case "Red":
-                Portas[2].SetActive(false);
+                //Portas[2].SetActive(false);
+                Destroy(Portas[2].gameObject);
                 break;
             case "Brown":
-                Portas[3].SetActive(false);
+                //Portas[3].SetActive(false);
+                Destroy(Portas[3].gameObject);
                 break;
             case "Orange":
-                Portas[4].SetActive(false);
+                //Portas[4].SetActive(false);
+                Destroy(Portas[4].gameObject);
                 break;
             case "Pink":
-                Portas[5].SetActive(false);
+                //Portas[5].SetActive(false);
+                Destroy(Portas[5].gameObject);
                 break;
             case "Blue":
-                Portas[6].SetActive(false);
+                //Portas[6].SetActive(false);
+                Destroy(Portas[6].gameObject);
                 break;
 
         }
