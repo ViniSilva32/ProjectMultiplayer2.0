@@ -47,7 +47,7 @@ public class PlayerMoviment : MonoBehaviour
         frente = 10;
         re = 5;
 
-        if (!photonview.IsMine)
+        if (this.photonview.IsMine)
         {
             myCamera.gameObject.SetActive(false);
         }
