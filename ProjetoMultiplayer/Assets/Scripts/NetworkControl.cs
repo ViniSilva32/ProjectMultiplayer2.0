@@ -63,7 +63,7 @@ public class NetworkControl : MonoBehaviourPunCallbacks
 
     public void CreateRoom()
     {
-        RoomOptions roomOptions = new RoomOptions() { MaxPlayers = 4 };
+        RoomOptions roomOptions = new RoomOptions() { MaxPlayers = 2 };
         PhotonNetwork.JoinOrCreateRoom(roomNameInput.text, roomOptions, TypedLobby.Default);
     }
 
@@ -107,9 +107,22 @@ public class NetworkControl : MonoBehaviourPunCallbacks
         lobbyPn.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(false);
 
-        Vector3 pos = SpawnA.transform.position;
+        Vector3 posA = SpawnA.transform.position;
+        Vector3 posB = SpawnB.transform.position;
 
-        PhotonNetwork.Instantiate(playerPUN.name, pos, playerPUN.transform.rotation, 0);
+
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        {
+            PhotonNetwork.Instantiate(playerPUN.name, posA, playerPUN.transform.rotation, 0);
+        }
+        else if (PhotonNetwork.CurrentRoom.PlayerCount == 2)
+        {
+            PhotonNetwork.Instantiate(playerPUN.name, posB, playerPUN.transform.rotation, 0);
+        }
+
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 

@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Pun.UtilityScripts;
+using Photon.Realtime;
 
 public class PlayerMoviment : MonoBehaviour
 {
@@ -27,14 +30,27 @@ public class PlayerMoviment : MonoBehaviour
 
     private float CameraRotation = 0f;
     private float currentCameraRotation = 0f;
-    
 
-    
-   
+    public PhotonView photonview;
+    public Camera myCamera;
+    float frente;
+    float re;
+
+    NetworkControl teste;
 
     // Start is called before the first frame update
     void Start()
     {
+        teste = GameObject.FindGameObjectWithTag("Network").GetComponent<NetworkControl>();
+        photonview = GetComponent<PhotonView>();
+        frente = 10;
+        re = 5;
+
+        if (!photonview.IsMine)
+        {
+            myCamera.gameObject.SetActive(false);
+        }
+
         rb = GetComponent<Rigidbody>();
         col = GetComponent<CapsuleCollider>();
     }
@@ -42,17 +58,44 @@ public class PlayerMoviment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float xMovement = Input.GetAxis("Horizontal");
-        float zMovement = Input.GetAxis("Vertical");
+        #region Movimentação antiga
+        //float xMovement = Input.GetAxis("Horizontal");
+        //float zMovement = Input.GetAxis("Vertical");
 
-        Vector3 movementHorizontal = transform.right * xMovement;
-        Vector3 movementVertical = transform.forward * zMovement;
+        //Vector3 movementHorizontal = transform.right * xMovement;
+        //Vector3 movementVertical = transform.forward * zMovement;
 
-        Vector3 movementVelocity = (movementHorizontal + movementVertical).normalized * speed;
-        
-            Move(movementVelocity);
+        //Vector3 movementVelocity = (movementHorizontal + movementVertical).normalized * speed;
 
-        if ( IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+        //    Move(movementVelocity);
+        #endregion
+
+        #region Movimentação Photon
+        if (photonview.IsMine)
+        {
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(0, 0, (frente * Time.deltaTime));
+            }
+
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(0, 0, (-frente * Time.deltaTime));
+            }
+
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate((-frente * Time.deltaTime), 0, 0);
+            }
+
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate((frente * Time.deltaTime), 0, 0);
+            }
+        }
+            #endregion
+
+        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
         {
             rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
         }
@@ -97,6 +140,19 @@ public class PlayerMoviment : MonoBehaviour
     void RotateCamera(float cameraRotation)
     {
         CameraRotation = cameraRotation;
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Respawn"))
+        {
+            transform.position = teste.SpawnA.transform.position;
+        }
+        if (other.CompareTag("RespawnB"))
+        {
+            transform.position = teste.SpawnB.transform.position;
+        }
     }
 }
 

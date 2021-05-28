@@ -23,7 +23,7 @@ public class Button : MonoBehaviour
         {
             print("colidiu");
             print(ButtonColor);
-            if (Input.GetKey(KeyCode.Q))
+            if (Input.GetMouseButtonDown(0))
             {
                 print("clicou");
                 Click();
