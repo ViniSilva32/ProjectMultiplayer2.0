@@ -1693,7 +1693,7 @@ GameObject:
   - component: {fileID: 417728031}
   - component: {fileID: 417728030}
   - component: {fileID: 417728029}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Ch\xE3o mapa02"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3027,9 +3027,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 86080a783905b5740ad2b81f63a2c650, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.70009536, b: 0, a: 0.7294118}
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4004,8 +4004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 86080a783905b5740ad2b81f63a2c650, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.7019608, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4134,7 +4134,7 @@ GameObject:
   - component: {fileID: 774530256}
   - component: {fileID: 774530255}
   - component: {fileID: 774530254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plataforma (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6041,7 +6041,7 @@ GameObject:
   - component: {fileID: 1173837861}
   - component: {fileID: 1173837860}
   - component: {fileID: 1173837859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "Ch\xE3o mapa01"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6972,7 +6972,7 @@ GameObject:
   - component: {fileID: 1337399349}
   - component: {fileID: 1337399348}
   - component: {fileID: 1337399347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plataforma (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7068,7 +7068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1337781659
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7975,7 +7975,7 @@ GameObject:
   - component: {fileID: 1550630531}
   - component: {fileID: 1550630530}
   - component: {fileID: 1550630529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plataforma (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9679,8 +9679,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 86080a783905b5740ad2b81f63a2c650, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.7019608, b: 0, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11234,7 +11234,7 @@ GameObject:
   - component: {fileID: 2140838610}
   - component: {fileID: 2140838609}
   - component: {fileID: 2140838608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Plataforma (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

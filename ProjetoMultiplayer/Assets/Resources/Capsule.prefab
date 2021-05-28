@@ -107,7 +107,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   photonview: {fileID: 0}
-  myCamera: {fileID: 0}
+  myCamera: {fileID: 8774937195453547168}
   GameOver: {fileID: 0}
 --- !u!136 &6639348367060483222
 CapsuleCollider:
