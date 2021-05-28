@@ -93,23 +93,24 @@ public class PlayerMoviment : MonoBehaviourPun
             {
                 transform.Translate((frente * Time.deltaTime), 0, 0);
             }
+            if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
+            {
+                rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
+            }
+
+            float yRotation = Input.GetAxis("Mouse X");
+            Vector3 rotationVector = new Vector3(0, yRotation, 0) * lookSensivity;
+
+            Rotate(rotationVector);
+
+            float CameraRotation = Input.GetAxis("Mouse Y") * lookSensivity;
+
+
+            RotateCamera(CameraRotation);
         }
             #endregion
 
-        if (IsGrounded() && Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(Vector3.up * JumpForce, ForceMode.Impulse);
-        }
 
-        float yRotation = Input.GetAxis("Mouse X");
-        Vector3 rotationVector = new Vector3(0, yRotation, 0) * lookSensivity;
-
-        Rotate(rotationVector);
-
-        float CameraRotation = Input.GetAxis("Mouse Y") * lookSensivity;
-
-
-        RotateCamera(CameraRotation);
     }
     private bool IsGrounded() => Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, 
         col.bounds.center.z), col.radius * 12f, GroundLayers);
@@ -126,15 +127,18 @@ public class PlayerMoviment : MonoBehaviourPun
 
     private void FixedUpdate()
     {
-        if (velocity != Vector3.zero)
+        if (photonview.IsMine)
         {
-            rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
-        }
-        rb.MoveRotation(rb.rotation * Quaternion.Euler(rotations));
-        if(fpsCamera != null)
-        {
-            currentCameraRotation -= CameraRotation;
-            currentCameraRotation = Mathf.Clamp(currentCameraRotation, 0, 0); 
+            if (velocity != Vector3.zero)
+            {
+                rb.MovePosition(rb.position + velocity * Time.fixedDeltaTime);
+            }
+            rb.MoveRotation(rb.rotation * Quaternion.Euler(rotations));
+            if (fpsCamera != null)
+            {
+                currentCameraRotation -= CameraRotation;
+                currentCameraRotation = Mathf.Clamp(currentCameraRotation, 0, 0);
+            }
         }
     }
 
