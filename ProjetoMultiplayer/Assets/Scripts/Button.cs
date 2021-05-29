@@ -4,31 +4,38 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 
-public class Button : MonoBehaviour
+public class Button : MonoBehaviourPun
 {
     //public GameObject Porta;
     public GameObject InteractiveButton;
     string ButtonColor;
     public GameObject[] Portas = new GameObject[7];
     bool Clicavel = false;
+    public PhotonView photonview;
 
     // Start is called before the first frame update
     void Start()
     {
-       // ButtonColor = InteractiveButton.GetComponent<Renderer>().material.name;
+        photonview = GetComponent<PhotonView>();
+        // ButtonColor = InteractiveButton.GetComponent<Renderer>().material.name;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Clicavel)
+        if (photonview.IsMine)
         {
-            print("colidiu");
-            print(ButtonColor);
-            if (Input.GetMouseButtonDown(0))
+            if (Clicavel)
             {
-                print("clicou");
-                Click();
+                print("colidiu");
+                //print(ButtonColor);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    print("clicou");
+                    photonview.RPC("Click", RpcTarget.All);
+
+                    //Click();
+                }
             }
         }
 
@@ -48,6 +55,7 @@ public class Button : MonoBehaviour
         Clicavel = false;
     }
 
+    [PunRPC]
     public void Click()
     {
         //Porta.SetActive(false);
@@ -56,31 +64,31 @@ public class Button : MonoBehaviour
         {
             case "Yellow":
                 //Portas[0].SetActive(false);
-                Destroy(Portas[0].gameObject);
+                PhotonView.Destroy(Portas[0].gameObject);
                 break;
             case "Green":
                 //Portas[1].SetActive(false);
-                Destroy(Portas[1].gameObject);
+                PhotonView.Destroy(Portas[1].gameObject);
                 break;
             case "Red":
                 //Portas[2].SetActive(false);
-                Destroy(Portas[2].gameObject);
+                PhotonView.Destroy(Portas[2].gameObject);
                 break;
             case "Brown":
                 //Portas[3].SetActive(false);
-                Destroy(Portas[3].gameObject);
+                PhotonView.Destroy(Portas[3].gameObject);
                 break;
             case "Orange":
                 //Portas[4].SetActive(false);
-                Destroy(Portas[4].gameObject);
+                PhotonView.Destroy(Portas[4].gameObject);
                 break;
             case "Pink":
                 //Portas[5].SetActive(false);
-                Destroy(Portas[5].gameObject);
+                PhotonView.Destroy(Portas[5].gameObject);
                 break;
             case "Blue":
                 //Portas[6].SetActive(false);
-                Destroy(Portas[6].gameObject);
+                PhotonView.Destroy(Portas[6].gameObject);
                 break;
 
         }

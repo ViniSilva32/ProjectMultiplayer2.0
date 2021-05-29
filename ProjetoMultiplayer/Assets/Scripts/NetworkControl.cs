@@ -25,6 +25,10 @@ public class NetworkControl : MonoBehaviourPunCallbacks
     public GameObject SpawnA;
     public GameObject SpawnB;
 
+    public GameObject GameOver;
+    public GameObject Tutorial;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -105,6 +109,7 @@ public class NetworkControl : MonoBehaviourPunCallbacks
 
         loginPn.gameObject.SetActive(false);
         lobbyPn.gameObject.SetActive(false);
+        Tutorial.gameObject.SetActive(false);
         mainCamera.gameObject.SetActive(false);
 
         Vector3 posA = SpawnA.transform.position;

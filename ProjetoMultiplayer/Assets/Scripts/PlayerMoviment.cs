@@ -35,7 +35,6 @@ public class PlayerMoviment : MonoBehaviourPun
     public Camera myCamera;
     float frente;
     float re;
-    public GameObject GameOver;
 
     NetworkControl teste;
 
@@ -103,17 +102,17 @@ public class PlayerMoviment : MonoBehaviourPun
 
             Rotate(rotationVector);
 
-            float CameraRotation = Input.GetAxis("Mouse Y") * lookSensivity;
+            //float CameraRotation = Input.GetAxis("Mouse Y") * lookSensivity;
 
 
-            RotateCamera(CameraRotation);
+            //RotateCamera(CameraRotation);
         }
             #endregion
 
 
     }
     private bool IsGrounded() => Physics.CheckCapsule(col.bounds.center, new Vector3(col.bounds.center.x, col.bounds.min.y, 
-        col.bounds.center.z), col.radius * 12f, GroundLayers);
+        col.bounds.center.z), col.radius * 1f, GroundLayers);
 
     void Move(Vector3 movementVelocity)
     {
@@ -164,8 +163,17 @@ public class PlayerMoviment : MonoBehaviourPun
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            GameOver.gameObject.SetActive(true);
+            if(photonview.IsMine)
+            {
+                photonview.RPC("Ganhar", RpcTarget.All);
+            }
         }
+    }
+
+    [PunRPC]
+    void Ganhar()
+    {
+        teste.GameOver.gameObject.SetActive(true);
     }
 }
 

@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  lookSensivity: 15
+  lookSensivity: 50
   fpsCamera: {fileID: 8322269024250167021}
   JumpForce: 50
   col: {fileID: 6639348367060483222}
@@ -108,7 +108,6 @@ MonoBehaviour:
     m_Bits: 256
   photonview: {fileID: 0}
   myCamera: {fileID: 8774937195453547168}
-  GameOver: {fileID: 0}
 --- !u!136 &6639348367060483222
 CapsuleCollider:
   m_ObjectHideFlags: 0
